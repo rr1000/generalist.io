@@ -1,5 +1,6 @@
 GeneralistIo::Application.routes.draw do
-  root '/'
+
+  root "directory#index"
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
