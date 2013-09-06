@@ -1,29 +1,134 @@
 // Place all the styles related to the directory controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import url(http://fonts.googleapis.com/css?family=Libre+Baskerville:400,700,400italic);
+$red: #b03b33;
+$blue: #005b7f;
+$dark_blue: #003145;
+$dark: #444;
+$light: #fff;
+$gray: #ccc;
+$serif: "Libre Baskerville", "Adobe Caslon Pro", serif;
+$sans: "Avenir", "Futura", sans-serif;
 body{
-	background-color: #b03b33;
-	font-family: "Avenir", "Futura", sans-serif;
-}
-.static{
-	h1{
-		text-align: center;
-		color: #fff;
-		font-size: 80pt;
-		margin: 100px 0 0 0;
-		letter-spacing: 2px;
-		line-height: 1.3;
+	background-color: $light;
+	font-family: $sans;
+	padding: 0px;
+	margin: 0px;
+	img{
+		width: 100%;
+		height: auto;
 	}
-	p{
-		text-align: center;
-		color: #fff;
-		font-size: 15pt;
-		padding: 0px 0 0 0;
-		letter-spacing: 2px;
-		max-width: 500px;
+}
+.top_bar{
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	height: 15px;
+	position: fixed;
+	background-color: $red;
+}
+.logo{
+	width: 100px;
+	height: 100px;
+	margin: 40px auto 0 auto;
+}
+.wrap{
+	max-width: 900px;
+	margin: auto;
+	width: 100%;
+}
+/* INTRO */
+.intro{
+	margin: 50px 0 0 0;
+}
+.intro-h1{
+	text-align: center;
+	font-size: 21pt;
+	color: $dark;
+	line-height: 1.5;
+	font-weight: bold;
+}
+.intro-p{
+	margin: 30px 0 0 0;
+	font-size: 15pt;
+	font-weight: normal;
+	line-height: 2;
+	color: $dark;
+	font-family: $serif;
+	span{
+		color: $red;
+	}
+}
+/* EMAIL */
+.email{
+	margin: 40px auto 0 auto;
+	padding: 20px 30px 40px 30px;
+	border-top: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+	max-width: 423px;
+	input[type=text]{
+		border: 1px solid #ccc;
+		padding: 10px;
+		max-width: 400px;
+		width: 100%;
 		margin: auto;
-		span{
-			color: #832414
-		}
+	}
+}
+.email-p{
+	color: $blue;
+	font-size: 13pt;
+	text-align: center;
+	font-weight: bold;
+}
+.email-bttn-wrap{
+	margin: 30px auto 0 auto;
+	max-width: 110px;
+	width: 100%;
+}
+.email-bttn{
+	padding: 10px 30px 10px 30px;
+	background-color: $blue;
+	color: $light;
+	text-align: center;
+	text-decoration: none;
+	&:hover{
+		opacity: 0.8;
+	}
+}
+/* FOLD */
+.fold{
+	background-color: #f1f1f1;
+	border: 1px solid #ddd;
+	padding: 0px 40px 20px 40px;
+	margin: 0px 0 0 0;
+}
+.fold-h3{
+	color: $blue;
+	text-align: center;
+	margin: 40px 0 0 0;
+	font-size: 20pt;
+}
+.fold-img{
+	margin: 40px 0 0 0;
+}
+.fold-p{
+	@extend .intro-p;
+	span{
+		color: $blue;
+	}
+}
+footer{
+	margin: 50px 0 0 0;
+	padding: 20px 0 20px 0;
+	border-top: 2px solid $gray;
+}
+.footer-p{
+	@extend .email-p;
+}
+@media all and (max-width: 900px){
+	body{
+		padding: 0 20px 0 20px;
 	}
 }
