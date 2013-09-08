@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>A generalist is one</title>
+		<title>MVP Design &amp; Development For Founders</title>
 		<%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
 		<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
 		<%= csrf_meta_tags %>
+		<%= favicon_link_tag 'favicon.ico' %>
 	</head>
 	<body>
 		<%= render "layouts/header" %>
 		<div class="wrap">
+			<% flash.each do |name, msg| %>
+				<%= content_tag(:div, msg, class: "signed-sucess") %>
+			<% end %>
 			<%= yield %>
 		</div>
 		<%= render "layouts/footer" %>

@@ -20,6 +20,10 @@ gem 'jbuilder', '~> 1.2'
 
 gem 'autoprefixer-rails'
 
+gem 'devise'
+
+gem 'gibbon'
+
 group :doc do
   gem 'sdoc', require: false
 end

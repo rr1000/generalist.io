@@ -5,6 +5,7 @@
 $red: #b03b33;
 $blue: #005b7f;
 $dark_blue: #003145;
+$green: #3b8a4e;
 $dark: #444;
 $light: #fff;
 $gray: #ccc;
@@ -48,6 +49,9 @@ body{
 	color: $dark;
 	line-height: 1.5;
 	font-weight: bold;
+	span{
+		border-bottom: 2px solid $dark;
+	}
 }
 .intro-p{
 	margin: 30px 0 0 0;
@@ -68,13 +72,40 @@ body{
 	border-right: 1px solid #ccc;
 	border-left: 1px solid #ccc;
 	max-width: 423px;
-	input[type=text]{
+	input[type=email]{
 		border: 1px solid #ccc;
 		padding: 10px;
 		max-width: 400px;
 		width: 100%;
 		margin: auto;
 	}
+}
+input[type=submit]{
+	padding: 10px 30px 10px 30px;
+	margin: 0px;
+	background-color: $blue;
+	color: $light;
+	font-size: 12pt;
+	text-align: center;
+	text-decoration: none;
+	border: none;
+	&:hover{
+		opacity: 0.8;
+		cursor: pointer;
+	}
+}
+.response{
+	text-align: center;
+	font-weight: bold;
+	padding-bottom: 15px;
+}
+#mce-error-response{
+	@extend .response;
+	color: $red;
+}
+#mce-success-response{
+	@extend .response;
+	color: $green;
 }
 .email-p{
 	color: $blue;
