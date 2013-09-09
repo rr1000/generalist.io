@@ -12,7 +12,7 @@
 				<div class="response" id="mce-error-response" style="display:none"></div>
 				<div class="response" id="mce-success-response" style="display:none"></div>
 			</div>
-			<input type="email" value="" name="EMAIL" id="mce-EMAIL">
+			<input type="email" placeholder="Your Email" value="" name="EMAIL" id="mce-EMAIL">
 			<div class="email-bttn-wrap">
 				<input type="submit" value="Send it" name="subscribe" id="mc-embedded-subscribe" class="email-bttn">
 			</div>
@@ -143,6 +143,8 @@ function mce_init_form(){
 }
 function mce_success_cb(resp){
 	$('#mce-success-response').hide();
+	$('#mce-EMAIL').hide();
+	$('#mc-embedded-subscribe').hide();
 	$('#mce-error-response').hide();
 	if (resp.result=="success"){
 		$('#mce-'+resp.result+'-response').show();
