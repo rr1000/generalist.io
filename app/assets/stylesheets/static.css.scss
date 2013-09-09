@@ -7,6 +7,7 @@ $blue: #005b7f;
 $dark_blue: #003145;
 $green: #3b8a4e;
 $dark: #444;
+$darker: #333;
 $light: #fff;
 $gray: #ccc;
 $serif: "Libre Baskerville", "Adobe Caslon Pro", serif;
@@ -149,6 +150,34 @@ input[type=submit]{
 	span{
 		color: $blue;
 	}
+}
+/* AUTHOR */
+.author{
+	padding: 0px 40px 20px 40px;
+	margin: 0px 0 0 0;
+	background-color: $darker;
+}
+.author-h3{
+	color: $light;
+	padding: 20px 0 0 0;
+	@extend .fold-h3;
+}
+.author-p{
+	color: $light;
+	@extend .intro-p;
+	span{
+		color: $red;
+	}
+}
+.author-a{
+	color: $gray;
+	&:hover{
+		opacity: 0.8;
+		cursor: pointer;
+	}
+}
+.author-img{
+	margin: 20px 0 0 0;
 }
 footer{
 	margin: 50px 0 0 0;
