@@ -143,10 +143,10 @@ function mce_init_form(){
 }
 function mce_success_cb(resp){
 	$('#mce-success-response').hide();
-	$('#mce-EMAIL').hide();
-	$('#mc-embedded-subscribe').hide();
 	$('#mce-error-response').hide();
 	if (resp.result=="success"){
+		$('#mce-EMAIL').hide();
+		$('#mc-embedded-subscribe').hide();
 		$('#mce-'+resp.result+'-response').show();
 		$('#mce-'+resp.result+'-response').html(resp.msg);
 		$('#mc-embedded-subscribe-form').each(function(){
